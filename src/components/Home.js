@@ -7,7 +7,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowText(true);
-    }, 500); // Ajusta el tiempo de retraso si es necesario
+    }, 100);
   }, []);
 
   return (

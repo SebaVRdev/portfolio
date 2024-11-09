@@ -29,7 +29,7 @@ const Navbar2 = () => {
   }, [lastScrollY]);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full transition-opacity duration-300 z-50 ${isScrolled ? 'bg-gray-900 opacity-100' : 'bg-gray-900 opacity-100'} py-4 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav className={`fixed top-0 left-0 w-full transition-opacity duration-300 z-50 ${isScrolled ? 'bg-black opacity-100' : 'bg-black opacity-100'} py-4 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container mx-auto flex justify-between items-center">
         {/* Icono de hamburguesa */}
         <div className="md:hidden flex items-center">
@@ -60,7 +60,7 @@ const Navbar2 = () => {
 
       {/* Menú desplegable en pantallas pequeñas */}
       <div
-        className={`md:hidden bg-gray-900 text-white flex flex-col items-center overflow-hidden transition-all duration-300 
+        className={`md:hidden bg-black text-white flex flex-col items-center overflow-hidden transition-all duration-300 
         ${menuOpen ? 'max-h-60 opacity-100 transform translate-y-0' : 'max-h-0 opacity-0 transform -translate-y-4 pointer-events-none'}`}
       >
         <a href="#home" className="py-2 hover:text-gray-400 transition duration-300">Inicio</a>
