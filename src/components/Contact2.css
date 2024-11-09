@@ -1,0 +1,53 @@
+/* Fondo negro solo en la sección */
+#contact {
+  background: #000; /* Fondo negro solo en la sección */
+  color: white;
+  position: relative;
+  overflow: hidden; /* Evita que las burbujas se desborden */
+  height: 100vh; /* La sección ocupa toda la pantalla */
+}
+
+/* Burbujas dentro de la sección */
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Abarcar todo el ancho */
+  height: 100%; /* Abarcar toda la altura */
+  pointer-events: none; /* Evitar que las burbujas interfieran con otros elementos */
+  z-index: 10; /* Mantener las burbujas detrás del contenido */
+}
+
+.bubbles span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  box-shadow: 0 0 0 10px rgba(79, 195, 220, 0.2666666667), 0 0 50px #705AFE, 0 0 100px #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(75s / var(--i)); /* Variable para la duración */
+  animation-delay: calc(-1s * var(--i)); /* Desfase aleatorio para cada burbuja */
+}
+
+.bubbles span:nth-child(even) {
+  background: #FFC107;
+  box-shadow: 0 0 0 10px #F0DB4F, 0 0 50px #ff2d75, 0 0 100px #F23B00;
+}
+
+/* Distribución aleatoria de las burbujas */
+.bubbles span {
+  top: 100%; /* Empieza fuera de la pantalla, en la parte inferior */
+  left: calc(60% * (var(--i) / 25)); /* Posiciona las burbujas de izquierda a derecha */
+}
+
+/* Animación para mover las burbujas */
+@keyframes animate {
+  0% {
+    transform: translateY(0) scale(0); /* Las burbujas empiezan fuera de la pantalla y pequeñas */
+  }
+  100% {
+    transform: translateY(-100vh) scale(1); /* Las burbujas se desplazan hacia arriba y desaparecen */
+  }
+}

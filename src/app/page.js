@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Contact2 from "@/components/Contact2";
 import Home from "@/components/Home";
 import Navbar2 from "@/components/Nabvar2";
 import Navbar from "@/components/Navbar";
@@ -16,7 +17,7 @@ export default function Page() {
      {/*  <Projects /> */}
       <ScrollToTopButtom/>
       <About />
-      <Contact />
+      <Contact2 />
     </div>
   );
 }

@@ -8,7 +8,7 @@ const About = () => {
   });
 
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-gray-100 py-16">
+    <section id="about" className="min-h-screen flex items-center justify-center bg-gray-200 py-16">
       <div ref={ref} className={`transition-opacity transform duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} max-w-4xl px-4`}>
         {/* Foto */}
         <div className="flex justify-center mb-8">

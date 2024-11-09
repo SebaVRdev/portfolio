@@ -54,38 +54,3 @@ html {
 .scroll-button:hover {
   background-color: #9fa1a3; /* Color de fondo al hacer hover */
 }
-
-/* Estilos para el cielo estrellado */
-.stars {
-  position: relative;
-}
-
-.star {
-  position: absolute;
-  border-radius: 50%;
-  background-color: white; /* Las estrellas serán blancas por defecto */
-  animation: moveStar linear infinite, twinkle 2s infinite alternate;
-}
-
-/* Animación para hacer que las estrellas se muevan a través del cielo */
-@keyframes moveStar {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100vw); /* Mueve las estrellas de izquierda a derecha */
-  }
-}
-
-/* Animación de parpadeo de las estrellas */
-@keyframes twinkle {
-  0% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
