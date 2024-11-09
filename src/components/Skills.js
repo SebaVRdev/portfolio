@@ -41,23 +41,27 @@ const Skills = () => {
     className={`py-16 bg-gray-100 transition-opacity duration-700 ${inView ? 'opacity-100' : 'opacity-0'}`}>
       <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Tecnologías</h2>
 
-      {/* Frameworks - Cards grandes */}
-      <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12 px-4">
-        {frameworks.sort((a, b) => (b.level - a.level)).map((framework, index) => (
-          <div
-            key={framework.id}
-            className={`transition-opacity transform duration-500 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-            style={{ transitionDelay: `${index * 0.15}s` }}>
-            <FrameworkCard 
-              name={framework.name} 
-              img={framework.img} 
-              level={framework.level}/>
+      
+      <div className="max-w-full overflow-x-auto px-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
+          {frameworks.sort((a, b) => (b.level - a.level)).map((framework, index) => (
+            <div
+              key={framework.id}
+              className={`pb-3 transition-opacity transform duration-500 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              style={{ transitionDelay: `${index * 0.15}s` }}
+            >
+              <FrameworkCard 
+                name={framework.name} 
+                img={framework.img} 
+                level={framework.level} 
+              />
+            </div>
+          ))}
         </div>
-        ))}
       </div>
 
       {/* Lenguajes - Cards pequeñas */}
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto text-center mt-4">
         <h3 className="text-2xl font-semibold text-gray-800 mb-8">Lenguajes</h3>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center items-center px-4">
           {languages.map((lang, index) => (

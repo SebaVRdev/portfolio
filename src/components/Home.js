@@ -11,13 +11,13 @@ const Home = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-black px-4 pt-8">
+    <section id="home" className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-black px-4 sm:px-2 pt-4">
       {/* Imagen en la parte superior en móviles y a la derecha en pantallas grandes */}
       <div className="w-full md:w-1/2 mb-2 md:mb-0">
         <img 
           src="/img/home.jpg" 
           alt="Descripción de la imagen" 
-          className={`w-full h-auto rounded-full border-4 border-black transition-opacity duration-1000 ease-in ${showText ? 'opacity-100' : 'opacity-0'} delay-1000 shadow-lg`} 
+          className={`w-full h-auto rounded-full border-4 border-black transition-opacity duration-1000 ease-in ${showText ? 'opacity-100' : 'opacity-0'} delay-1000 shadow-lg  max-w-full`} 
           style={{ boxShadow: '0 4px 20px rgba(255, 255, 255, 0.5)' }} // Sombra blanca
         />
       </div>
