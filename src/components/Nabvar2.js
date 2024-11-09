@@ -64,7 +64,7 @@ const Navbar2 = () => {
         ${menuOpen ? 'max-h-60 opacity-100 transform translate-y-0' : 'max-h-0 opacity-0 transform -translate-y-4 pointer-events-none'}`}
       >
         <a href="#home" className="py-2 hover:text-gray-400 transition duration-300">Inicio</a>
-        <a href="#projects" className="py-2 hover:text-gray-400 transition duration-300">Proyectos</a>
+        <a href="#skills" className="py-2 hover:text-gray-400 transition duration-300">Tecnologías</a>
         <a href="#about" className="py-2 hover:text-gray-400 transition duration-300">Sobre mí</a>
         <a href="#contact" className="py-2 hover:text-gray-400 transition duration-300">Contacto</a>
       </div>
