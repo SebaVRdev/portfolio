@@ -1,7 +1,9 @@
+'use client';
 // Skills.js
 import React from 'react';
 import FrameworkCard from './FrameworkCard';
 import SkillCard from './SkillCard';
+import { useInView } from 'react-intersection-observer';
 
 const frameworks = [
   { id: 0, name: "Angular", img: "/img/skills/angular.png", level: 70 },
@@ -10,6 +12,7 @@ const frameworks = [
   { id: 3, name: "Sequelize", img: "/img/skills/sequelize.png", level: 65 },
   { id: 4, name: "React", img: "/img/skills/react.png", level: 70 },
   { id: 5, name: "NestJS", img: "/img/skills/nest.png", level: 75 },
+  { id: 6, name: "Microservicios", img: "/img/skills/microservicios.png", level: 30 },
 ];
 
 const languages = [
@@ -26,14 +29,30 @@ const databases = [
 ];
 
 const Skills = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.2,
+  });
+
   return (
-    <section id="skills" className="py-16 bg-gray-100">
+    <section 
+    ref={ref}
+    id="skills" 
+    className={`py-16 bg-gray-100 transition-opacity duration-700 ${inView ? 'opacity-100' : 'opacity-0'}`}>
       <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Tecnologías</h2>
 
       {/* Frameworks - Cards grandes */}
       <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12 px-4">
-        {frameworks.sort((a, b) => (b.level - a.level)).map((framework) => (
-          <FrameworkCard key={framework.id} name={framework.name} img={framework.img} level={framework.level} />
+        {frameworks.sort((a, b) => (b.level - a.level)).map((framework, index) => (
+          <div
+            key={framework.id}
+            className={`transition-opacity transform duration-500 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            style={{ transitionDelay: `${index * 0.15}s` }}>
+            <FrameworkCard 
+              name={framework.name} 
+              img={framework.img} 
+              level={framework.level}/>
+        </div>
         ))}
       </div>
 
@@ -41,8 +60,13 @@ const Skills = () => {
       <div className="max-w-5xl mx-auto text-center">
         <h3 className="text-2xl font-semibold text-gray-800 mb-8">Lenguajes</h3>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center items-center px-4">
-          {languages.map((lang) => (
-            <SkillCard key={lang.id} name={lang.name} img={lang.img} level={lang.level} />
+          {languages.map((lang, index) => (
+             <div
+             key={lang.id}
+             className={`transition-opacity transform duration-500 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+             style={{ transitionDelay: `${index * 0.7}s` }}>
+               <SkillCard name={lang.name} img={lang.img} level={lang.level} />
+             </div>
           ))}
         </div>
       </div>

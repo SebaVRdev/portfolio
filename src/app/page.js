@@ -10,13 +10,10 @@ import Skills from "@/components/Skills";
 export default function Page() {
   return (
     <div>
-      {/* Navbar fijo */}
-      {/* <Navbar/> */}
       <Navbar2 />
-      {/* Secciones */}
       <Home />
       <Skills/>
-      <Projects />
+     {/*  <Projects /> */}
       <ScrollToTopButtom/>
       <About />
       <Contact />

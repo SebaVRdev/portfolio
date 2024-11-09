@@ -23,12 +23,12 @@ const Home = () => {
       </div>
 
       {/* Contenido de texto alineado a la izquierda */}
-      <div className="text-left max-w-md mx-auto md:w-1/2">
+      <div className="text-left max-w-xl mx-auto md:w-1/2 lg:w-2/3 xl:w-1/2">
         <h1 className={`text-2xl sm:text-3xl md:text-4xl font-medium text-white transition-opacity duration-1000 ease-in ${showText ? 'opacity-100' : 'opacity-0'}`}>
           ¡Hola! Soy <span className="font-extrabold text-gray-300">Sebastian Valenzuela</span>
         </h1>
         <p className={`mt-2 text-lg sm:text-xl md:text-2xl font-normal text-gray-400 transition-opacity duration-1000 ease-in ${showText ? 'opacity-100' : 'opacity-0'} delay-500`}>
-          Estudiante de Ingeniería Civil en Informática con una fuerte pasión por la creación de soluciones digitales innovadoras.
+          Ingeniero Civil en Informática, fuerte pasión por la creación de soluciones digitales innovadoras.
         </p>
       </div>
 

@@ -51,7 +51,7 @@ const Navbar2 = () => {
         {/* Menú en pantallas grandes */}
         <div className="hidden md:flex space-x-8">
           <a href="#home" className="text-white hover:text-gray-400 transition duration-300">Inicio</a>
-          <a href="#projects" className="text-white hover:text-gray-400 transition duration-300">Proyectos</a>
+          <a href="#skills" className="text-white hover:text-gray-400 transition duration-300">Tecnologías</a>
           <a href="#about" className="text-white hover:text-gray-400 transition duration-300">Sobre mí</a>
           <a href="#contact" className="text-white hover:text-gray-400 transition duration-300">Contacto</a>
         </div>
