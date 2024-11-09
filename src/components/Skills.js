@@ -42,12 +42,12 @@ const Skills = () => {
       <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Tecnologías</h2>
 
       
-      <div className="max-w-full overflow-x-auto px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
+      <div className="max-w-full overflow-x-auto px-4 pb-4">
+        <div className="flex flex-wrap justify-center gap-6 lg:gap-4">
           {frameworks.sort((a, b) => (b.level - a.level)).map((framework, index) => (
             <div
               key={framework.id}
-              className={`pb-3 transition-opacity transform duration-500 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              className={`transition-opacity transform duration-500 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${index * 0.15}s` }}
             >
               <FrameworkCard 
@@ -59,6 +59,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
+
 
       {/* Lenguajes - Cards pequeñas */}
       <div className="max-w-5xl mx-auto text-center mt-4">
